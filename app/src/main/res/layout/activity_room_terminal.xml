@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/dark_background"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/terminalRoomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room Name"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_text_primary"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/terminalOccupancy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Occupancy: 0 / 10"
+        android:textSize="18sp"
+        android:textColor="@color/dark_primary"
+        android:layout_marginBottom="32dp" />
+
+    <ImageView
+        android:id="@+id/nfcIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_nfc"
+        android:layout_marginBottom="32dp"
+        app:tint="@color/dark_text_secondary" />
+
+    <TextView
+        android:id="@+id/terminalStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLEASE SCAN YOUR CARD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_text_primary"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/terminalUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="@color/dark_primary"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/exitTerminalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit Terminal"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/dark_card"
+        android:textColor="@color/dark_text_secondary" />
+
+</LinearLayout>

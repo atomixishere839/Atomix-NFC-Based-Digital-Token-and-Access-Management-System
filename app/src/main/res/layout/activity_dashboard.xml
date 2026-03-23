@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_background">
+
+    <!-- Main Content Container -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp" >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="72dp"
+            android:src="@drawable/ic_nfc"
+            app:backgroundTint="@color/dark_primary"
+            app:tint="@color/white" />
+    </FrameLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="@color/dark_card"
+        app:itemIconTint="@color/dark_primary"
+        app:itemTextColor="@color/dark_text_primary"
+        app:menu="@menu/bottom_navigation" />
+
+    <!-- Floating Action Button -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

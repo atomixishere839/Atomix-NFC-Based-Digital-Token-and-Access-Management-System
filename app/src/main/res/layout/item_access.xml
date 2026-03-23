@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/accessCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="👤"
+            android:textSize="32sp"
+            android:layout_marginEnd="16dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <TextView
+                android:id="@+id/cardIdText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Card: CARD001"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/accessLevelText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Level: EMPLOYEE"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:layout_marginTop="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Active"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_success"
+            android:background="@color/dark_surface"
+            android:padding="6dp"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_background">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:background="@color/dark_card">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_marginEnd="16dp"
+            app:tint="@color/dark_text_primary" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/roomTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text_primary" />
+
+            <TextView
+                android:id="@+id/roomIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room ID: ROOM001"
+                android:textSize="12sp"
+                android:textColor="@color/dark_text_secondary" />
+
+            <TextView
+                android:id="@+id/occupancyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Occupancy: 0 / 10"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_primary"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/historyButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_history"
+            android:layout_marginStart="16dp"
+            app:tint="@color/dark_text_primary" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/addAccessButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Grant Access"
+            android:backgroundTint="@color/dark_primary" />
+
+        <Button
+            android:id="@+id/terminalModeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="8dp"
+            android:text="Terminal Mode"
+            android:backgroundTint="@color/dark_card"
+            android:textColor="@color/dark_text_primary" />
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Access List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/accessRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:clipToPadding="false" />
+
+        <!-- Empty State -->
+        <LinearLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔐"
+                android:textSize="64sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Access Granted"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grant access to users for this room"
+                android:textSize="14sp"
+                android:textColor="@color/dark_text_secondary"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Screen Padding -->
+    <dimen name="screen_padding">16dp</dimen>
+    
+    <!-- Card Dimensions -->
+    <dimen name="card_margin">6dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_min_height">110dp</dimen>
+    <dimen name="card_text_size">13sp</dimen>
+    <dimen name="icon_size">28sp</dimen>
+    
+    <!-- Spacing -->
+    <dimen name="section_spacing">20dp</dimen>
+</resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:attr/colorBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/currentUserText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:gravity="end" />
+        </LinearLayout>
+
+        <!-- Status Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/statusText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scan_nfc_card"
+                    android:textSize="18sp"
+                    android:textColor="?attr/colorPrimary"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/textColorSecondary"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Card Info -->
+                <TextView
+                    android:id="@+id/cardTypeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_type"
+                    android:textSize="14sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/cardUidText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_uid"
+                    android:textSize="14sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/techListText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tech_list"
+                    android:textSize="14sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Card Data -->
+                <TextView
+                    android:id="@+id/userIdText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_id"
+                    android:textSize="14sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/balanceText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/balance"
+                    android:textSize="16sp"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/roleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/card_role"
+                    android:textSize="14sp"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons -->
+        <Button
+            android:id="@+id/readCardButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/read_card"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/addCoinsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_coins"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            android:enabled="false"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/spendCoinsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/spend_coins"
+            android:textSize="16sp"
+            android:enabled="false"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/wipeCardButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wipe Card (Admin)"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:enabled="false"
+            android:visibility="gone"
+            android:backgroundTint="?attr/colorError" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="?attr/colorError" />
+
+    </LinearLayout>
+
+</ScrollView>

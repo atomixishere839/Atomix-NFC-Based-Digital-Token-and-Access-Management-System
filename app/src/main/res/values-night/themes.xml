@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Theme -->
+    <style name="Theme.Atomix" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorPrimaryVariant">@color/dark_primary_variant</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/dark_secondary</item>
+        <item name="colorSecondaryVariant">@color/dark_secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@color/dark_text_primary</item>
+        <item name="colorOnBackground">@color/dark_text_primary</item>
+        <item name="colorError">@color/dark_error</item>
+        <item name="colorOnError">@color/black</item>
+        <item name="android:textColorPrimary">@color/dark_text_primary</item>
+        <item name="android:textColorSecondary">@color/dark_text_secondary</item>
+        <item name="android:statusBarColor">@color/dark_background</item>
+        <item name="android:navigationBarColor">@color/dark_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="materialButtonStyle">@style/Widget.Atomix.Button.Dark</item>
+    </style>
+    
+    <style name="Widget.Atomix.Button.Dark" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/dark_primary</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

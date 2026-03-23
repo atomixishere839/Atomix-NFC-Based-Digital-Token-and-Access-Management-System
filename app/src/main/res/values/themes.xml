@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Theme -->
+    <style name="Theme.Atomix" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/light_primary</item>
+        <item name="colorPrimaryVariant">@color/light_primary_variant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/light_secondary</item>
+        <item name="colorSecondaryVariant">@color/light_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="colorSurface">@color/light_card</item>
+        <item name="colorOnSurface">@color/light_text_primary</item>
+        <item name="colorOnBackground">@color/light_text_primary</item>
+        <item name="colorError">@color/light_error</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="android:textColorPrimary">@color/light_text_primary</item>
+        <item name="android:textColorSecondary">@color/light_text_secondary</item>
+        <item name="android:statusBarColor">@color/light_primary</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="materialButtonStyle">@style/Widget.Atomix.Button</item>
+    </style>
+    
+    <style name="Widget.Atomix.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/light_primary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>
